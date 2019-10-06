@@ -6,12 +6,12 @@ permalink: /projects/
 
 # Overview
  - Bachelor thesis, Sleep scoring with Keras
- - Crazyflie drone project
+ - Crazyfly drone project
  - RuneLite development
 
 ## Sleep scoring with Keras
 
-## Crazyflie drone project
+## Crazyfly drone project
 
 ## RuneLite development
 

@@ -21,19 +21,22 @@ Full paper available [here](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-239
 ## Crazyfly drone project
 We implemented a pathfinding, computer vision and localization for a Crazyflie drone for it to be able to fly through a course while recognizing traffic signs for extra points. The only input given was a 3D map so continous localization measures were needed as well as online pathplanning. 
 
+### Path planning
 To do the pathfinding we implemented a 2D A\* algorithm on a fixed height. The pathplanning was done in an online fashion.
 
 ![pathplanning drone](/assets/robotics_project_path_planning.png)
 
+### Computer vision
 To do the computer vision we used a convolutional neural network and applied it to every frame with a potential sign in it. 
 
 ![traffic signs detected](/assets/robotics_project_traffic_signs.png)
 
+### Localization
 To do the localization we used aruco markers which were placed thorughout the course.
 
 ![aruco detected](/assets/robotics_project_aruco.png)
 
-We used these in conjuction with their position on the given map to obtain the drone position through a simplified kalman filter. 
+We used these in conjuction with their position on the given map to obtain the drone position through a simplified Kalman filter. 
 
 Code not currently publicly available.
 

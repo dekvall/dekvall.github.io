@@ -7,7 +7,7 @@
 
 # Site settings
 title: A page about stuff
-email: dkvl@gmail.com
+email: dkvldev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A simple blog and a few guides, soon.
 baseurl: "" # the subpath of your site, e.g. /blog

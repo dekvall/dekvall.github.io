@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi, I am currently studying Electrical Engineering with a Master in Robotics at [KTH Royal Institure of Technology](https://www.kth.se/en). Sometimes I write software or create other things and this page will serve as a collection of all the interesting projects I come in contact with, no matter how small.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+It will probably also serve a bit as a personal blog.

@@ -67,19 +67,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+        <h2 id="overview">Overview</h2>
+<ul>
+  <li>Bachelor thesis, Sleep scoring with Keras</li>
+  <li>Crazyfly drone project</li>
+  <li>RuneLite development</li>
+</ul>
 
-<p>You can find the source code for the Jekyll new theme at:
-<a href="https://github.com/jglovier"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
-</span><span class="username">jglovier</span></a>
- /
-<a href="https://github.com/jglovier/jekyll-new">jekyll-new</a></p>
+<h2 id="sleep-scoring-with-keras">Sleep scoring with Keras</h2>
+<p>For my bachelor thesis I created a dense network classifier in python with keras. The goal was to use EEG and EMG data to analyze sleeping patterns for rats, also called sleep scoring. This process is currently done manually and the results would greatly reduce the time that researchers have to spend doing this tideous task. I used a preprocessing technique called feature extraction where some relevant statistical features were extracted from the data and then fed through the neural network.</p>
 
-<p>You can find the source code for Jekyll at
-<a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
-</span><span class="username">jekyll</span></a>
- /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<p><img src="/assets/bachelor_eeg_plot.png" alt="EEG features" /></p>
+
+<p>The resulting neural network had an accuracy of a little over 97 %.</p>
+
+<p>Full paper available <a href="http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-239372">here</a> with some code <a href="https://github.com/dekvall/rat_sleep_patterns">here</a>.</p>
+
+<h2 id="crazyfly-drone-project">Crazyfly drone project</h2>
+<p>We implemented a pathfinding, computer vision and localization for a Crazyflie drone for it to be able to fly through a course while recognizing traffic signs for extra points. The only input given was a 3D map so continous localization measures were needed as well as online pathplanning.</p>
+
+<p>To do the pathfinding we implemented a 2D A* algorithm on a fixed height. The pathplanning was done in an online fashion.</p>
+
+<p><img src="/assets/robotics_project_path_planning.png" alt="pathplanning drone" /></p>
+
+<p>To do the computer vision we used a convolutional neural network and applied it to every frame with a potential sign in it.</p>
+
+<p><img src="/assets/robotics_project_traffic_signs.png" alt="traffic signs detected" /></p>
+
+<p>To do the localization we used aruco markers which were placed thorughout the course.</p>
+
+<p><img src="/assets/robotics_project_aruco.png" alt="aruco detected" /></p>
+
+<p>We used these in conjuction with their position on the given map to obtain the drone position through a simplified kalman filter.</p>
+
+<p>Code not currently publicly available.</p>
+
+<h2 id="runelite-development">RuneLite development</h2>
+<p>RuneLite is an open-source 3rd party Old-school Runescape (OSRS) client for which I have written a few enhancements and bug-fixes.</p>
+
+<p>Check out the project <a href="https://github.com/runelite/runelite">here</a> or my fork <a href="https://github.com/dekvall/runelite">here</a>.</p>
+
 
       </div>
     </div>
